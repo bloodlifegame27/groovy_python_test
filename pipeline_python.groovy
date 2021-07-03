@@ -1,10 +1,15 @@
 pipeline {
-  agent any
-  stages {
-    stage('Stage 1') {
-      steps {
-        echo 'Hello world!'
-      }
+    agent any
+    stages {
+        stage('Setup') {
+            steps {
+                echo 'Hello world!'
+            }
+        }
+        stage('python') {
+            steps {
+                sh 'python --version'
+            }
+        }
     }
-  }
 }
