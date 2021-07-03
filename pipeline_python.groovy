@@ -1,4 +1,4 @@
-def exampleModule = load "./main.py"
+
 pipeline {
     agent any
     stages {
@@ -9,7 +9,8 @@ pipeline {
         }
         stage('python') {
             steps {
-                String age_name = exampleModule.test("Igor")
+                def exampleModule = load "./main.py"
+                def age_name = exampleModule.test("Igor")
                 println(age_name)
             }
         }
