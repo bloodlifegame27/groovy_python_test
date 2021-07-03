@@ -1,3 +1,6 @@
 def test(name):
-    num = 10
-    print("hello", name, num)
+    print("hello", name)
+
+
+if __name__ == "__main__":
+    test()
