@@ -1,5 +1,6 @@
+def exampleModule = load "./main.py"
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent any
     stages {
         stage('Setup') {
             steps {
@@ -8,7 +9,8 @@ pipeline {
         }
         stage('python') {
             steps {
-                sh 'ls ~'
+                age_name = exampleModule.test("Igor")
+                println(age_name)
             }
         }
     }
