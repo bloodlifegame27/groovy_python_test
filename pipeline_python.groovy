@@ -9,7 +9,7 @@ pipeline {
         }
         stage('python') {
             steps {
-                age_name = exampleModule.test("Igor")
+                String age_name = exampleModule.test("Igor")
                 println(age_name)
             }
         }
